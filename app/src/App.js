@@ -1,14 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
+import { connect } from 'react-redux';
 
-function App() {
+// Component imports
+import { CurrencySelector } from './components/currencySelector';
+import { CurrencyList } from './components/currencyList';
+
+function App(props) {
+
+  useEffect( () => {
+
+  }, [])
+
+
   return (
     <div className="App">
       <header className="App-header">
       <h1>Currency Exchange</h1>
       </header>
+      <main>
+        <CurrencySelector />
+        <CurrencyList />
+      </main>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, {})(App);
