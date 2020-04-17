@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 
 // Component imports
-import { CurrencySelector } from './components/currencySelector';
+import CurrencySelector from './components/currencySelector';
 import { CurrencyList } from './components/currencyList';
 
+
 function App(props) {
-
-  useEffect( () => {
-
-  }, [])
-
 
   return (
     <div className="App">
@@ -32,4 +28,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(App);
+export default connect(mapStateToProps, {  })(App);
